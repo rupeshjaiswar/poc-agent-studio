@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="split1">
+        <div class="banner-container">
+            <!-- <img src="assets/images/img1.png" alt="" srcset="" class="bannerImg"> -->
+        </div>
+    </div>
+    <div class="split2">
+      <div class="sign_in_form">
+        <p class="welcome_text">Welcome to CXT</p>
+        <p class="para1">Sign in to your account</p>
+        <p-divider layout="horizontal"></p-divider>
+        <div class="google-btn" >
+          <div class="google-icon-wrapper">
+            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+          </div>
+          <p class="btn-text">Continue with Google</p>
+        </div>
+        <p-divider layout="horizontal" class="divider-text">Or</p-divider>
+        <div>
+          <form (ngSubmit)="login()" [formGroup]="loginForm">
+            <div style="margin-top: 1px;">
+                <label for="username" class="para2">Username or Email*</label>
+                <input type="text" pInputText class="p-inputtext-sm" placeholder="Username or Email" formControlName="username">
+            </div>
+            <div style="margin-top: 5px;">
+                <label for="password" class="para2" >Password*</label>
+                <!-- <input type="password" pInputText class="p-inputtext-sm" placeholder="Password" > -->
+                <p-password formControlName="password" placeholder="Password" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%', 'border-radius': '6px', 'box-shadow': '0px 4px 10px rgba(0, 0, 0, 0.08)', 'border': '1px solid #20B283'}" [toggleMask]="true"></p-password>
+            </div>
+            <div style="margin-top: 5px;">
+                <input id="checkid2" type="checkbox" value="test" />
+                <label for="checkid2" class="para2">&nbsp; Keep me signed in</label>
+            </div>
+            <div class="sign-in-button">
+                <button ><p class="btn-txt">Sign In</p></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <img src="assets/images/logo.png" alt="" class="quantiphi-logo">
+    </div>
+  </div>

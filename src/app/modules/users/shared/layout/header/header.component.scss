@@ -1,0 +1,73 @@
+.gear-icon,
+.question-icon{
+  height: 62px;
+  width: 63.40909194946289px;
+  left: 1730.7705078125px;
+  top: 32.7646484375px;
+  border-radius: 0px;
+
+}
+
+.gear-icon:hover{
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.15));
+}
+
+.question-icon:hover{
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.15));
+}
+
+.account-icon,
+.mode-icon,
+.documentation-icon,
+.get-started-icon,
+.profile-pic-icon{
+  height: 22px;
+  width: 22px;
+  left: 25px;
+  top: 24px;
+  border-radius: 0px;
+
+}
+
+.logout-icon{
+height: 32px;
+width: 32px;
+left: 3px;
+top: 40px;
+border-radius: 0px;
+}
+
+.qube-logo{
+
+  height: 58px;
+  width: 147.70849609375px;
+  left: 34.6474609375px;
+  top: 32.7646484375px;
+  border-radius: nullpx;
+
+
+}
+
+.icon{
+  display: flex;
+  justify-content:end;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bg-light {
+  background-color: rgba(211, 214, 219, 0.2) !important;
+}
+
+.navbar{
+  padding: 0 0 0 0;
+  height: 10%;
+}
+
+:host ::ng-deep .style2.p-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    margin-top: 10px;
+}

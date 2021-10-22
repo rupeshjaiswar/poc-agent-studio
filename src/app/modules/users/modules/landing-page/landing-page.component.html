@@ -1,0 +1,245 @@
+<!-- Header -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pr-5">
+  <a class="navbar-brand" [routerLink]="'.'" tooltip = "Go to Dashboard" placement="bottom">
+    <img class="img-responsive" src="assets/images/qube-logo.svg" alt="Qube" class="qube-logo">
+  </a>
+
+  <div class="collapse navbar-collapse mt-3">
+    <ul class="navbar-nav ml-auto">
+
+
+      <li class="nav-item" >
+        <a class="nav-link">
+          <p><img class="question-icon" src="assets/images/User_Guide.png"
+             alt="FAQ's Page" pTooltip = "FAQ's" tooltipPosition="top"
+             (click)="faqs.toggle($event)"
+             ></p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" >
+          <p><img class="gear-icon" src="assets/images/Setting_Icon.png"
+             alt="Settings Page" pTooltip = "Settings" tooltipPosition="top"
+             (click)="settings.toggle($event)"
+             ></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<p-overlayPanel #settings [showCloseIcon]="false" [style]="{width: '300px', height: '290px'}">
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <p><img src="assets/images/account.svg" alt="account" class="account-icon">&nbsp;&nbsp;Account</p>
+        </td>
+      </tr>
+
+      <tr>
+        <!-- <td>
+          <p><img src="assets/images/mode.svg" alt="account" class="mode-icon">&nbsp;&nbsp;Dark Mode</p>
+          <p-inputSwitch (ngModel)="checked"class="switch-button"></p-inputSwitch>
+        </td> -->
+
+        <div class="grid">
+          <div class="col-8" style="text-align: left;">
+            <p>
+              <img src="assets/images/mode.svg" alt="account" class="mode-icon">
+              &nbsp;
+              Dark Mode
+            </p>
+          </div>
+
+          <div class="col-4 pb-3">
+            <p-inputSwitch (ngModel)="checked" (click)="checkedChange()"></p-inputSwitch>
+          </div>
+
+        </div>
+
+
+      </tr>
+
+      <tr>
+        <td>
+          <p (click)="showInfo()"><img src="assets/images/documentation.svg" alt="account" class="documentation-icon">&nbsp;&nbsp;Documentation/User Guide</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p><img src="assets/images/get-started.svg" alt="account" class="get-started-icon">&nbsp;&nbsp;Get Started</p>
+        </td>
+      </tr>
+    </tbody>
+
+
+  </table>
+
+  <hr>
+
+  <footer>
+    <div class="grid align-items-baseline">
+      <div class="col-9" style="text-align: left;">
+        <p>
+          <img src="assets/images/profile-pic.svg" class="profile-pic-icon" alt="profile pic">
+          &nbsp;
+          John Doe
+        </p>
+      </div>
+
+      <div class="col-3" style="text-align: right;">
+        <img src="assets/images/logout.svg" class="logout-icon" alt="logout" (click)="logout()">
+      </div>
+
+    </div>
+
+  </footer>
+
+</p-overlayPanel>
+
+
+<!-- PDF Viewer -->
+<p-dialog header="Sample Document" [(visible)]="displayMaximizable" [modal]="true" [style]="{width: '50vw'}" [maximizable]="true"
+    [draggable]="false" [resizable]="false">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum odit incidunt cumque fuga sint placeat excepturi non voluptatem exercitationem. Exercitationem cupiditate asperiores quidem adipisci nobis voluptatum assumenda quasi porro rem?
+        A week ago a friend invited a couple of other couples over for dinner. Eventually, the food (but not the wine) was cleared off the table for what turned out to be some fierce Scrabbling. Heeding the strategy of going for the shorter, more valuable word over the longer cheaper word, our final play was “Bon,” which–as luck would have it!–happens to be a Japanese Buddhist festival, and not, as I had originally asserted while laying the tiles on the board, one half of a chocolate-covered cherry treat. Anyway, the strategy worked. My team only lost by 53 points instead of 58.
+        Just the day before, our host had written of the challenges of writing short. In journalism–my friend’s chosen trade, and mostly my own, too–Mark Twain’s observation undoubtedly applies: “I didn’t have time to write a short letter, so I wrote a long one instead.” The principle holds across genres, in letters, reporting, and other writing. It’s harder to be concise than to blather. (Full disclosure, this blog post will clock in at a blather-esque 803 words.) Good writing is boiled down, not baked full of air like a souffl??. No matter how yummy souffl??s may be. Which they are. Yummy like a Grisham novel.
+        Lately, I’ve been noticing how my sentences have a tendency to keep going when I write them onscreen. This goes for concentrated writing as well as correspondence. (Twain probably believed that correspondence, in an ideal world, also demands concentration. But he never used email.) Last week I caught myself packing four conjunctions into a three-line sentence in an email. That’s inexcusable. Since then, I have tried to eschew conjunctions whenever possible. Gone are the commas, the and’s, but’s, and so’s; in are staccato declaratives. Better to read like bad Hemingway than bad Faulkner.
+        Length–as we all know, and for lack of a more original or effective way of saying it–matters. But (ahem), it’s also a matter of how you use it. Style and length are technically two different things.
+        Try putting some prose onscreen, though, and they mix themselves up pretty quickly. This has much to do with the time constraints we claim to feel in the digital age. We don’t have time to compose letters and post them anymore–much less pay postage, what with all the banks kinda-sorta losing our money these days–so we blast a few emails. We don’t have time to talk, so we text. We don’t have time to text to specific people, so we update our Facebook status. We don’t have time to write essays, so we blog.
+        I’m less interested by the superficial reduction of words–i.e. the always charming imho or c u l8r–than the genres in which those communications occur: blogs, texts, tweets, emails. All these interstitial communiques, do they really reflect super brevity that would make Twain proud? Or do they just reflect poorly stylized writing that desperately seeks a clearer form?
+        I rather think the latter. Clive Thompson wrote last month in the NYT Magazine that constant digital updates, after a day, can begin “to feel like a short story; follow it for a month, and it’s a novel.” He was right to see the bits as part of a larger whole. The words now flying through our digital pipes & ether more or less tend to resemble parts of bigger units, perhaps even familiar genres. But stories and novels have definite conclusions; they also have conventional lengths. Quick, how long is the conventional blog, when you add up all of its posts and comments? How long is the longest email thread you send back and forth on a single topic?
+        Most important: What exactly are we writing when we’re doing all of this writing? I won’t pretend to coin a whole new term here; I still think the best we can muster is a more fitting analogue. And if we must find an analogue in an existing literary unit, I propose the paragraph. Our constant writing has begun to feel like a neverending digital paragraph. Not a tight, stabbing paragraph from The Sun Also Rises or even a graceful, sometimes-slinking, sometimes-soaring paragraph from Absalom! Absalom!, I mean a convoluted, haphazard, meandering paragraph, something like Kerouac’s original draft of On the Road–only taped together by bytes. And 1 percent as interesting.
+        Paragraphs, particularly those that wrap from one page to the next, inherently possess a necessary suspension that tightens the reader’s focus yet breaks down the narrative into digestable sections. Just like emails or blogs or texts. The mental questions while reading all of these feel the same:
+        “Is this the last line or is there more?”
+        “Is the writer really trying to say something here, or just setting up a larger point?”
+        “Does this part have the information I’m looking for?”
+        (“Can I skip ahead?”)
+        David F. Smydra Jr. is a reporter, writer, and editor living in Silicon Valley. He occasionally posts similar bursts of media fancy here.</p>
+
+</p-dialog>
+
+<p-overlayPanel #faqs [showCloseIcon]="false" [style]="{width: '450px'}">
+  <p>Frquently asked questions</p>
+</p-overlayPanel>
+
+<!-- {{ checked }} -->
+
+
+<!-- main content -->
+
+<section class="pt-5 landing-page">
+
+  <!-- summary row -->
+
+  <div class="container pb-6">
+    <div class="grid">
+      <div class="col-12">
+        <img src="assets/images/summary.svg" alt="" class="summary">
+      </div>
+    </div>
+
+    <div class="grid pt-5 pb-3">
+      <div class="col-5 col-md-2 mr-5 mb-6 data">
+        <p class="mt-3">No. of Bots</p>
+        <h1 style="white-space: 'pre-line';" class="mt-5"><b>12</b></h1>
+      </div>
+      <div class="col-5 col-md-2 mr-5 mb-6 data">
+        <p class="mt-3">No. of Users</p>
+        <h1 style="white-space: 'pre-line';" class="mt-5"><b>72</b></h1>
+      </div>
+      <div class="col-5 col-md-2 mr-5 mb-6 data">
+        <p class="mt-3">Billing</p>
+        <h1 style="white-space: 'pre-line';" class="mt-5"><b>$72</b></h1>
+      </div>
+      <div class="col-5 col-md-2 mr-5 mb-6 data">
+        <p class="mt-3">Deflection rate</p>
+        <h1 style="white-space: 'pre-line';" class="mt-5"><b>21%</b></h1>
+      </div>
+      <div class="col-12 col-md-2 mr-5 mb-6 data">
+        <p class="mt-3">Average Conversion Length</p>
+        <h1 style="white-space: 'pre-line';" class="mt-5"><b>123</b></h1>
+      </div>
+    </div>
+
+
+    <!-- bot row -->
+
+    <div class="grid pb-2">
+      <div class="col-6">
+        <p class="bot-head align-items-center"><img src="assets/images/bots.svg" alt="" class="bots">
+          <img src="assets/images/bot-text.svg" alt="bots" class="bot-text"></p>
+      </div>
+      <div class="col-6 create-search-box">
+        <button (click)="createBot()" pButton type="button" label="Create New" icon="pi pi-plus" class="p-button-sm create-button"></button>
+        <span class="p-input-icon-right search-box">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText placeholder="Search Bot">
+      </span>
+      </div>
+    </div>
+
+    <div class="grid pt-5 pb-3">
+      <div class="col-5 col-md-3 mr-5 bot-info">
+        <div class="healthcare-bot">
+          <img src="assets/images/healthcare-bot.png" alt="healthcare bot" class="p-3 healthcare-bot-img">
+        </div>
+
+        <div class="p-1 healthcare-bot-info" >
+          <h6 class="mt-3" style="font-family: Inter;">Healthcare bot</h6>
+          <p style="white-space: 'pre-line'; font-size:x-small; font-family: Inter;">Bots can access various data silos and systems.</p>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 mr-5 bot-info">
+        <div class="banking-bot">
+          <img src="assets/images/banking-bot.png" alt="banking bot" class="p-3 banking-bot-img">
+        </div>
+
+        <div class="p-1 banking-bot-info">
+          <h6 class="mt-3" style="font-family: Inter;">Banking Bot</h6>
+          <p style="white-space: 'pre-line'; font-size:x-small; font-family: Inter;">Bots can access various data silos and systems.</p>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 mr-5 bot-info">
+        <div class="creditcard-bot">
+          <img src="assets/images/creditcard-bot.png" alt="creditcard bot" class="p-3 creditcard-bot-img">
+        </div>
+
+        <div class="p-1 creditcard-bot-info">
+          <h6 class="mt-3" style="font-family: Inter;">Credit Card Bot</h6>
+          <p style="white-space: 'pre-line'; font-size:x-small; font-family: Inter;">Bots can access various data silos and systems.</p>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 mr-5 bot-info">
+        <div class="insurance-bot">
+          <img src="assets/images/insurance-bot.png" alt="insurance bot" class="p-3 insurance-bot-img">
+        </div>
+
+        <div class="p-1 insurance-bot-info">
+          <h6 class="mt-3" style="font-family: Inter;">Insurance Bot</h6>
+          <p style="white-space: 'pre-line'; font-size:x-small; font-family: Inter;">Bots can access various data silos and systems.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+

@@ -1,0 +1,212 @@
+// .width-80p {
+//   margin: 0 auto;
+//   width: 80%;
+//   display: block;
+// }
+
+
+// header
+
+.navbar{
+  height: 75px;
+}
+
+.gear-icon,
+.question-icon{
+  height: 62px;
+  width: 63px;
+  left: 1730px;
+  top: 32px;
+  border-radius: 0px;
+
+}
+
+.gear-icon:hover{
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.15));
+}
+
+.question-icon:hover{
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.15));
+}
+
+.settings-open:hover{
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.qube-logo{
+
+  height: 58px;
+width: 147px;
+left: 34px;
+top: 32px;
+border-radius: nullpx;
+
+
+}
+
+.icon{
+  display: flex;
+  justify-content:end;
+  flex-direction: row;
+  align-items: center;
+}
+
+.account-icon,
+.mode-icon,
+.documentation-icon,
+.get-started-icon,
+.profile-pic-icon{
+  height: 22px;
+  width: 22px;
+  left: 25px;
+  top: 24px;
+  border-radius: 0px;
+
+}
+
+.logout-icon{
+height: 32px;
+width: 32px;
+left: 3px;
+top: 40px;
+border-radius: 0px;
+}
+
+.switch-button{
+  height: 20px;
+}
+
+
+//main-content
+
+.container{
+  display: block;
+}
+
+.grid{
+  display: flex;
+  align-items: center;
+}
+
+.data{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+  color: #161616;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100;
+  font-size:smaller;
+
+  height: 165px;
+  width: 296px;
+
+  // left: 50px;
+  // right: 50px;
+  top: 49%;
+  bottom: 26.07%;
+}
+
+.data:hover{
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all .55s ease-in-out;
+}
+
+h1{
+  color: #223e80;
+  font-weight: 300;
+}
+
+.summary{
+  width: 156.75px;
+
+  // left: 97.65px;
+}
+
+.create-search-box{
+  text-align: right;
+}
+
+.create-button{
+  height: 40px;
+  width: 137px;
+  // left: 13.7548828125px;
+  // top: 625.683837890625px;
+  border-radius: 8px;
+  background: #223E80;
+  opacity: 1;
+  transition: 0.3s
+}
+
+.create-button:hover{
+  background: #223E80;
+  opacity: 0.6;
+}
+
+.search-box{
+  height: 40px;
+  // width: 280px;
+  left: 24px;
+  // top: 625.683837890625px;
+  border-radius: 4px;
+}
+
+.bots{
+  height: 23px;
+  width: 32px;
+  left: 96.501953125px;
+  top: 633.6875px;
+  border-radius: 0px;
+}
+
+.bot-head{
+  font-family: Inter;
+  font-size: large;
+  font-weight: 400;
+}
+
+.bot-info{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+  color: #161616;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100;
+
+  height: 100px;
+  width: 230px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  // left: 105.71px;
+
+}
+
+.bot-info:hover{
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all .55s ease-in-out;
+}
+
+.bot-text{
+  width: 66px;
+  height: 29px;
+  // left: 150px;
+}
+
+.healthcare-bot-img,
+.banking-bot-img,
+.creditcard-bot-img,
+.insurance-bot-img{
+  height: 100px;
+  width: 100px;
+  // left: 142.396484375px;
+  // top: 758.4215087890625px;
+  border-radius: 4px;
+}
